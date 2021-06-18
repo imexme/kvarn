@@ -39,7 +39,6 @@
   font-size: 1.4rem;
   font-weight: 400;
   color: #5c5d61;
-  letter-spacing: 0.1rem;
 }
 .headerBlock__infoText > h4 > span {
   border-bottom: 1px solid #5c5d61;
@@ -65,4 +64,18 @@
   width: 26rem;
   padding: 1.2rem 0 1.2rem 0;
   border-radius: 5rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  border: transparent;
+  outline: transparent;
+}
+.headerBlock__button--primary {
+  background-color: #393c41;
+  color: white;
+  opacity: 0.9;
+}
+.headerBlock__button--secondary {
+  background-color: white;
+  color: black;
+  opacity: 0.8;
 }

@@ -50,6 +50,7 @@
 .header__link--hidden {
   visibility: hidden;
 }
+
 .header__menu > .MuiSvgIcon-root {
   position: relative;
   z-index: 100;

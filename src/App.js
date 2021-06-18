@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import Header from './components/Home/Header';
-import Menu from './components/Home/Menu';
-import HeaderBlock from './components/Home/HeaderBlock';
+import { Route, Switch } from 'react-router-dom';
+import HomePage from './components/Home/index';
+import LoginPage from './components/LoginPage/index';
 import './App.css';
 
 
@@ -11,13 +10,19 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <Route>
-      <div className="App">
-        <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        <Menu isMenuOpen={isMenuOpen} />
-        <HeaderBlock />
-      </div>
-    </Route>
+    <div className="App">
+      <Switch>
+
+        <Route path="/" exact>
+          <HomePage isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        </Route>
+
+        <Route path="/login">
+          <LoginPage />
+        </Route>
+
+      </Switch>
+    </div>
   );
 }
 

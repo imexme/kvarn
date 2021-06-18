@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "Gotham";
-  src: url("./fonts/Gotham-Light.otf");
+  src: url("./fonts/GothamBook.ttf");
   font-weight: 400;
 }
 @font-face {
@@ -36,4 +36,5 @@ code {
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }

@@ -1,0 +1,54 @@
+.login {
+  height: 100vh;
+  padding: 1.4rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+.login__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.login__logo > a > img {
+  object-fit: contain;
+  width: 12rem;
+}
+.login__language {
+  color: #393c41;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 8px 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  transition: all 0.2s ease-in;
+}
+.login__language:hover {
+  background-color: rgba(211, 211, 211, 0.294);
+}
+
+.login__language > .MuiSvgIcon-root {
+  font-size: 2rem;
+}
+.login__language > span {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.login__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 33rem;
+  margin: 0 auto;
+}
+.login__info h1 {
+  font-weight: 500;
+  font-size: 4rem;
+  margin-left: -1rem;
+}
