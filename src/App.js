@@ -3,8 +3,9 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import HomePage from './components/Home/index';
 import LoginPage from './components/LoginPage/index';
-import './App.css';
 import SignupPage from './components/SignupPage/index';
+import AccountPage from './components/AccountPage/index';
+import './App.css';
 
 
 function App() {
@@ -15,23 +16,23 @@ function App() {
   return (
     <div className="App">
       <Switch>
-
         <Route path="/" exact>
           <HomePage isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         </Route>
 
-        <Route path="/login">
+        <Route exact path="/login">
           {user && <Redirect to="/teslaaccount" />}
           {!user && <LoginPage />}
         </Route>
 
-        <Route path="/signup">
+        <Route exact path="/signup">
           {user && <Redirect to="/teslaaccount" />}
           {!user && <SignupPage />}
         </Route>
 
-        <Route path="/teslaaccount">
-          <h1>Tesla Account</h1>
+        <Route exact path="/teslaaccount">
+          {!user && <Redirect to="/login" />}
+          {user && <AccountPage isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
         </Route>
 
       </Switch>

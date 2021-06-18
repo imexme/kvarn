@@ -13,7 +13,9 @@ const Login = () => {
     const history = useHistory();
 
     const signInHandler = (userData) => {
+
         auth.signInWithEmailAndPassword(userData.email, userData.password).then((userAuth) => {
+
             dispatch(login({
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,

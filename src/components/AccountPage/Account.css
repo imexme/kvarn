@@ -1,0 +1,15 @@
+.account__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem 14rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 1px solid #eee;
+  width: 80%;
+  margin: 0 auto;
+}
+.account__person > h4 {
+  font-weight: 400;
+  font-size: 2.8rem;
+  color: #171a20;
+}
