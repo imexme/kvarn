@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from './components/Home/Header';
 import Menu from './components/Home/Menu';
+import HeaderBlock from './components/Home/HeaderBlock';
 import './App.css';
 
 
@@ -14,6 +15,7 @@ function App() {
       <div className="App">
         <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <Menu isMenuOpen={isMenuOpen} />
+        <HeaderBlock />
       </div>
     </Route>
   );
