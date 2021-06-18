@@ -5,7 +5,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import './Header.css';
 
 const Header = ({ isMenuOpen, setIsMenuOpen }) => {
-
+    const headerLinks = ["Model S", "Model 3", "Model X", "Model Y", "Solar Roof", "Solar Panels"];
 
     return (
         <div className="header">
@@ -17,12 +17,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 </Link>
             </div>
             <div className="header__links">
-                <Link to="/">Model S</Link>
-                <Link to="/">Model 3</Link>
-                <Link to="/">Model X</Link>
-                <Link to="/">Model Y</Link>
-                <Link to="/">Solar Roof</Link>
-                <Link to="/">Solar Panels</Link>
+                {headerLinks.map(link => <Link to="/">{link}</Link>)}
             </div>
             <div className="header__right">
                 <Link to="/" className={isMenuOpen && 'header__link--hidden'}>Shop</Link>

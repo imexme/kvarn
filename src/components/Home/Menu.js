@@ -5,21 +5,10 @@ import './Menu.css';
 
 
 const Menu = ({ isMenuOpen }) => {
+    const menuItems = ["existing inventory", "used inventory", "trade-in", "cybertruck", "roadster", "semi", "charging", "powerwall", "commercial solar", "test drive", "find us", "support", "united states"];
     return (
         <div className={`menu ${isMenuOpen && 'showMenu'}`}>
-            <MenuItem title='existing inventory' />
-            <MenuItem title='used inventory' />
-            <MenuItem title='trade-in' />
-            <MenuItem title='cybertruck' />
-            <MenuItem title='roadster' />
-            <MenuItem title='semi' />
-            <MenuItem title='charging' />
-            <MenuItem title='powerwall' />
-            <MenuItem title='commercial solar' />
-            <MenuItem title='test drive' />
-            <MenuItem title='find us' />
-            <MenuItem title='support' />
-            <MenuItem title='united states' />
+            {menuItems.map(item => <MenuItem title={item} />)}
         </div>
     )
 }
