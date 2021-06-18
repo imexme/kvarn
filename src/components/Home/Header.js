@@ -17,11 +17,11 @@ const Header = ({ isMenuOpen, setIsMenuOpen }) => {
                 </Link>
             </div>
             <div className="header__links">
-                {headerLinks.map(link => <Link to="/">{link}</Link>)}
+                {headerLinks.map((link, index) => <Link to="/" key={index}>{link}</Link>)}
             </div>
             <div className="header__right">
-                <Link to="/" className={isMenuOpen && 'header__link--hidden'}>Shop</Link>
-                <Link to="/login" className={isMenuOpen && 'header__link--hidden'}>Account</Link>
+                <Link to="/" className={isMenuOpen ? 'header__link--hidden' : ""}>Shop</Link>
+                <Link to="/login" className={isMenuOpen ? 'header__link--hidden' : ""}>Account</Link>
                 <div className='header__menu'
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
