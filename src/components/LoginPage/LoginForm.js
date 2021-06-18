@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import ButtonPrimary from '../UI/ButtonPrimary';
+import Button from '../UI/Button';
 import './LoginForm.css';
 const LoginForm = () => {
     const emailRef = useRef("");
@@ -27,7 +27,7 @@ const LoginForm = () => {
                 value={passwordRef.current.value}
                 ref={passwordRef}
             />
-            <ButtonPrimary name='Sign In' type='button' onClick="submit" >SIGN IN</ButtonPrimary>
+            <Button name='Sign In' type='button' onClick="submit" className="primary" >SIGN IN</Button>
         </form>
     )
 }
