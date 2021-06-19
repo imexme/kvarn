@@ -4,7 +4,7 @@ import { login } from '../../features/userSlice';
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.js';
 import Header from '../UI/Header';
-import SignupFrom from './SignupForm';
+import SignupForm from '../Forms/SignupForm';
 import Button from '../UI/Button';
 import './Signup.css';
 
@@ -30,7 +30,7 @@ const Signup = () => {
             <Header />
             <div className="signup__info">
                 <h1>Create Account</h1>
-                <SignupFrom onSignUp={signUpHandler} />
+                <SignupForm onSignUp={signUpHandler} />
                 <div className="signup__divider">
                     <span>OR</span>
                 </div>

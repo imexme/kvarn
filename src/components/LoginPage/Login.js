@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import useLogin from '../../hooks/use-login';
-import LoginForm from './LoginForm';
+import LoginForm from '../Forms/LoginForm';
 import Button from '../UI/Button';
 import Header from '../UI/Header'
 import "./Login.css";
