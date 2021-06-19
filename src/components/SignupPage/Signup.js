@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { login } from '../../features/userSlice';
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../../firebase/firebase.js';
-import Header from '../LoginPage/Header';
+import Header from '../UI/Header';
 import SignupFrom from './SignupForm';
 import Button from '../UI/Button';
 import './Signup.css';

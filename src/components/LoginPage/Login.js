@@ -1,32 +1,17 @@
-import { Link, useHistory } from 'react-router-dom';
-import { auth } from '../../firebase/firebase.js';
-import { useDispatch } from 'react-redux';
-import { login } from '../../features/userSlice';
+import { Link } from 'react-router-dom';
+import useLogin from '../../hooks/use-login';
 import LoginForm from './LoginForm';
 import Button from '../UI/Button';
-import Header from './Header'
+import Header from '../UI/Header'
 import "./Login.css";
 
 
 const Login = () => {
-    const dispatch = useDispatch();
-    const history = useHistory();
-
+    const firebaseLogin = useLogin();
     const signInHandler = (userData) => {
-
-        auth.signInWithEmailAndPassword(userData.email, userData.password).then((userAuth) => {
-
-            dispatch(login({
-                email: userAuth.user.email,
-                uid: userAuth.user.uid,
-                displayName: userAuth.user.displayName
-            }))
-            history.push("/teslaaccount");
-        }).catch(err => {
-            alert(`Something went wrong! ${err.message}`)
-        });
-
+        firebaseLogin(userData.email, userData.password);
     }
+
     return (
         <div className="login">
             <Header />

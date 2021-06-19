@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../features/userSlice';
 import { Link, useHistory } from 'react-router-dom';
-import Header from '../Home/Header';
+import NavHeader from '../UI/NavHeader';
 import Car from './Car';
 import './Account.css';
 const Account = ({ isMenuOpen, setIsMenuOpen }) => {
@@ -17,16 +17,16 @@ const Account = ({ isMenuOpen, setIsMenuOpen }) => {
     }
     return (
         <div className="account">
-            <Header notSticky={true} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+            <NavHeader notSticky={true} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <div className="account__info">
                 <div className="account__person">
                     <h4>{`${displayName}'s Tesla`}</h4>
                 </div>
                 <div className="account__infoRight">
-                    <Link >Home</Link>
-                    <Link >Charging</Link>
-                    <Link >Settings</Link>
-                    <Link onClick={logoutApp}>Sign out</Link>
+                    <Link to="#"  >Home</Link>
+                    <Link to="#"  >Charging</Link>
+                    <Link to="#"  >Settings</Link>
+                    <Link to="#" onClick={logoutApp}>Sign out</Link>
                 </div>
             </div>
             <div className="account__cars">

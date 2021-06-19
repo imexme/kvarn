@@ -1,6 +1,6 @@
 import React from 'react'
 import Account from './Account';
-import Menu from '../Home/Menu'
+import Menu from '../Menu/Menu'
 const AccountPage = ({ isMenuOpen, setIsMenuOpen }) => {
     return (
         <>

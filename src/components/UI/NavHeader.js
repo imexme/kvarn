@@ -1,10 +1,11 @@
+import React from 'react'
 import { Link } from 'react-router-dom';
 import logo from '../../assets/Tesla-logo.svg';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import './Header.css';
+import './NavHeader.css';
 
-const Header = ({ notSticky, isMenuOpen, setIsMenuOpen }) => {
+const NavHeader = ({ notSticky, isMenuOpen, setIsMenuOpen }) => {
     const headerLinks = ["Model S", "Model 3", "Model X", "Model Y", "Solar Roof", "Solar Panels"];
 
     return (
@@ -32,4 +33,7 @@ const Header = ({ notSticky, isMenuOpen, setIsMenuOpen }) => {
     )
 }
 
-export default Header;
+export default NavHeader;
+
+
+//this header is used in homepage and accountpage
