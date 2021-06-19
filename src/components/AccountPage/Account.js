@@ -1,4 +1,5 @@
 import React from 'react'
+import { auth } from '../../firebase/firebase';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../features/userSlice';
 import { Link, useHistory } from 'react-router-dom';
@@ -12,7 +13,9 @@ const Account = ({ isMenuOpen, setIsMenuOpen }) => {
 
     const logoutApp = (e) => {
         e.preventDefault();
-        dispatch(logout());
+        auth.signOut().then(() => {
+            dispatch(logout());
+        })
         history.push("/");
     }
     return (

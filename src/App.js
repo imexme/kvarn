@@ -18,14 +18,19 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((userAuth) => {
       if (userAuth) {
-        dispatch(login({
-          email: userAuth.email,
-          uid: userAuth.uid,
-          displayName: userAuth.displayName,
-        }))
-      }
-      else {
-        dispatch(logout());
+        // User is signed in
+        dispatch(
+          login({
+            email: userAuth.email,
+            uid: userAuth.uid,
+            displayName: userAuth.displayName,
+          })
+        )
+      } else {
+        // User is signed out
+        auth.signOut().then(() => {
+          dispatch(logout())
+        })
       }
     })
   }, [dispatch])

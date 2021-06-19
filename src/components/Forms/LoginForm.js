@@ -30,7 +30,7 @@ const LoginForm = (props) => {
             return
         }
 
-        props.onSignIn({ enteredEmail, enteredPassword });
+        props.onSignIn({ email: enteredEmail, password: enteredPassword });
     }
 
     const emailClasses = `${formInputsValidity.email ? '' : 'invalid'}`

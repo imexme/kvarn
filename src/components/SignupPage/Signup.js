@@ -1,32 +1,24 @@
-import React from 'react'
-import { useDispatch } from 'react-redux';
-import { login } from '../../features/userSlice';
-import { Link, useHistory } from 'react-router-dom';
-import { auth } from '../../firebase/firebase.js';
+import React, { useState } from 'react'
+import useSignup from '../../hooks/use-signup';
+import { Link } from 'react-router-dom';
+import Spinner from '../UI/Spinner.js';
 import Header from '../UI/Header';
 import SignupForm from '../Forms/SignupForm';
 import Button from '../UI/Button';
 import './Signup.css';
 
+
 const Signup = () => {
-    const dispatch = useDispatch();
-    const history = useHistory();
+    const [isLoading, setIsLoading] = useState(false);
+    const firebaseSignup = useSignup();
+
     const signUpHandler = ({ firstName, lastName, email, password }) => {
-        auth.createUserWithEmailAndPassword(email, password).then((userAuth) => {
-            userAuth.user.updateProfile({ displayName: firstName }).then(() => {
-                dispatch(login({
-                    email: userAuth.user.email,
-                    uid: userAuth.user.uid,
-                    displayName: firstName
-                }))
-                history.push("/teslaaccount")
-            }).catch(err => {
-                alert(`Something went wrong! ${err.message}`)
-            })
-        });
+        setIsLoading(true);
+        firebaseSignup(firstName, email, password);
     }
     return (
         <div className="signup">
+            {isLoading && <Spinner animation="border" />}
             <Header />
             <div className="signup__info">
                 <h1>Create Account</h1>

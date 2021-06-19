@@ -41,7 +41,7 @@ const SignupForm = (props) => {
         }
 
 
-        props.onSignUp({ enteredFirstName, enteredLastName, enteredEmail, enteredPassword });
+        props.onSignUp({ firstName: enteredFirstName, lastName: enteredLastName, email: enteredEmail, password: enteredPassword });
 
     }
 
