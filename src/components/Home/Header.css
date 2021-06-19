@@ -10,6 +10,9 @@
   padding: 2.5rem;
   padding-top: 2rem;
 }
+.notSticky {
+  position: relative;
+}
 
 .header__logoImg {
   object-fit: contain; /* maintains the aspect ratio */

@@ -4,11 +4,11 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import './Header.css';
 
-const Header = ({ isMenuOpen, setIsMenuOpen }) => {
+const Header = ({ notSticky, isMenuOpen, setIsMenuOpen }) => {
     const headerLinks = ["Model S", "Model 3", "Model X", "Model Y", "Solar Roof", "Solar Panels"];
 
     return (
-        <div className="header">
+        <div className={`header ${notSticky && 'notSticky'}`}>
             <div className="header__logo">
                 <Link to='/'>
                     <img

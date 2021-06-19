@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../features/userSlice';
 import { Link, useHistory } from 'react-router-dom';
 import Header from '../Home/Header';
+import Car from './Car';
 import './Account.css';
 const Account = ({ isMenuOpen, setIsMenuOpen }) => {
     const displayName = useSelector(state => state.user.user.displayName);
@@ -12,11 +13,11 @@ const Account = ({ isMenuOpen, setIsMenuOpen }) => {
     const logoutApp = (e) => {
         e.preventDefault();
         dispatch(logout());
-        history.push("./");
+        history.push("/");
     }
     return (
         <div className="account">
-            <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+            <Header notSticky={true} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <div className="account__info">
                 <div className="account__person">
                     <h4>{`${displayName}'s Tesla`}</h4>
@@ -28,8 +29,9 @@ const Account = ({ isMenuOpen, setIsMenuOpen }) => {
                     <Link onClick={logoutApp}>Sign out</Link>
                 </div>
             </div>
-            <div className="account__cards">
-
+            <div className="account__cars">
+                <Car imgSrc='https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-models@2x.jpg?20170815' model="model s" testDrive={true} />
+                <Car imgSrc='https://www.tesla.com/tesla_theme/assets/img/mytesla/v3/header-nocar-modelx@2x.jpg?20170815' model="model x" testDrive={false} />
             </div>
         </div>
     )

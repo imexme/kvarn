@@ -5,9 +5,9 @@ import HeaderBlock from './HeaderBlock';
 const Home = ({ isMenuOpen, setIsMenuOpen }) => {
     return (
         <>
-        <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        <Menu isMenuOpen={isMenuOpen} />
-        <HeaderBlock />
+            <Header notSticky={false} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+            <Menu isMenuOpen={isMenuOpen} />
+            <HeaderBlock />
         </>
     )
 }
