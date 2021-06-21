@@ -1,0 +1,28 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.model_s {
+  background-image: url("/images/model-s.jpg");
+}
+.model_y {
+  background-image: url("https://raw.githubusercontent.com/bilal-23/tesla-clone/HomePlusDetaiPage/src/assets/images/model-y.jpg");
+}
+.model_3 {
+  background-image: url("https://raw.githubusercontent.com/bilal-23/tesla-clone/HomePlusDetaiPage/src/assets/images/model-3.jpg");
+}
+.model_x {
+  background-image: url("https://raw.githubusercontent.com/bilal-23/tesla-clone/HomePlusDetaiPage/src/assets/images/model-x.jpg");
+}
+.solar_panel {
+  background-image: url("https://raw.githubusercontent.com/bilal-23/tesla-clone/HomePlusDetaiPage/src/assets/images/solar-panel.jpg");
+}
+.solar_roofs {
+  background-image: url("https://raw.githubusercontent.com/bilal-23/tesla-clone/HomePlusDetaiPage/src/assets/images/solar-roof.jpg");
+}
+.accessories {
+  background-image: url("https://raw.githubusercontent.com/bilal-23/tesla-clone/HomePlusDetaiPage/src/assets/images/accessories.jpg");
+}

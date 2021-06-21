@@ -1,18 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
-const Section = () => {
+import Hero from './Hero';
+import './Section.css'
+const Section = (props) => {
+
     return (
-        <Wrap>
-        </Wrap>
+        <div className={`wrap ${props.model}`}>
+            <Hero
+                title={props.title}
+                description={props.description}
+                descriptionSpan={props.descriptionSpan}
+                leftButton={props.leftButton}
+                rightButton={props.rightButton} />
+        </div>
     )
 }
 
 export default Section
-
-const Wrap = styled.div`
-    width:100vw;
-    height:100vh;
-    background-size:cover;
-    background-image:url('/images/model-s.jpg);
-
-`
