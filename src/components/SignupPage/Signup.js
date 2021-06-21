@@ -10,7 +10,7 @@ import './Signup.css';
 
 const Signup = () => {
     const [isLoading, setIsLoading] = useState(false);
-    const firebaseSignup = useSignup();
+    const firebaseSignup = useSignup(setIsLoading);
 
     const signUpHandler = ({ firstName, lastName, email, password }) => {
         setIsLoading(true);

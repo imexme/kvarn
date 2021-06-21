@@ -3,7 +3,7 @@ import { login } from '../features/userSlice';
 import { useDispatch } from 'react-redux';
 
 
-const useLogin = () => {
+const useLogin = (setIsLoading) => {
     const dispatch = useDispatch();
 
     const firebaseLogin = (email, password) => {
@@ -14,8 +14,8 @@ const useLogin = () => {
                 uid: userAuth.user.uid,
                 displayName: userAuth.user.displayName
             }))
-
         }).catch(err => {
+            setIsLoading(state => !state);
             alert(`Something went wrong! ${err.message}`)
         });
     }

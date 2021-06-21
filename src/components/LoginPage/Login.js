@@ -10,10 +10,11 @@ import "./Login.css";
 
 const Login = () => {
     const [isLoading, setIsLoading] = useState(false);
-    const firebaseLogin = useLogin();
+    const firebaseLogin = useLogin(setIsLoading);
     const signInHandler = (userData) => {
         setIsLoading(true);
         firebaseLogin(userData.email, userData.password);
+
     }
 
     return (
