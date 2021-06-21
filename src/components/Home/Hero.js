@@ -15,7 +15,9 @@ const Hero = (props) => {
                 <div className="cta_actions">
                     <div className="cta__buttons">
                         <button className="button--primary">{props.leftButton}</button>
-                        <button className="button--secondary">{props.rightButton}</button>
+                        {props.rightButton &&
+                            <button className="button--secondary">{props.rightButton}</button>
+                        }
                     </div>
                     <DownArrow />
                 </div>
