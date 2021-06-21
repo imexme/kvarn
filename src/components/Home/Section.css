@@ -7,23 +7,47 @@
   scroll-snap-align: start;
 }
 .model_s {
-  background-image: url("../../assets/images/model-s.jpg");
+  background-image: url("../../assets/images/desktop-model-s.jpg");
 }
 .model_y {
-  background-image: url("../../assets/images//model-y.jpg");
+  background-image: url("../../assets/images/desktop-model-y.jpg");
 }
 .model_3 {
-  background-image: url("../../assets/images/model-3.jpg");
+  background-image: url("../../assets/images/desktop-model-3.jpg");
 }
 .model_x {
-  background-image: url("../../assets/images/model-x.jpg");
+  background-image: url("../../assets/images/desktop-model-x.jpg");
 }
 .solar_panel {
-  background-image: url("../../assets/images/solar-panel.jpg");
+  background-image: url("../../assets/images/desktop-solar-panel.jpg");
 }
 .solar_roofs {
-  background-image: url("../../assets/images/solar-roof.jpg");
+  background-image: url("../../assets/images/desktop-solar-roof.jpg");
 }
 .accessories {
-  background-image: url("../../assets/images/accessories.jpg");
+  background-image: url("../../assets/images/desktop-accessories.jpg");
+}
+
+@media (max-width: 600px) {
+  .model_s {
+    background-image: url("../../assets/images/mobile-model-s.jpg");
+  }
+  .model_y {
+    background-image: url("../../assets/images/mobile-model-y.jpg");
+  }
+  .model_3 {
+    background-image: url("../../assets/images/mobile-model-3.jpg");
+  }
+  .model_x {
+    background-image: url("../../assets/images/mobile-model-x.jpg");
+  }
+  .solar_panel {
+    background-image: url("../../assets/images/mobile-solar-panel.jpg");
+  }
+  .solar_roofs {
+    background-image: url("../../assets/images/mobile-solar-roof.jpg");
+  }
+  .accessories {
+    background-image: url("../../assets/images/mobile-accessories.jpg");
+  }
 }
