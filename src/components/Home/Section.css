@@ -1,0 +1,29 @@
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  scroll-snap-align: start;
+}
+.model_s {
+  background-image: url("../../assets/images/model-s.jpg");
+}
+.model_y {
+  background-image: url("../../assets/images//model-y.jpg");
+}
+.model_3 {
+  background-image: url("../../assets/images/model-3.jpg");
+}
+.model_x {
+  background-image: url("../../assets/images/model-x.jpg");
+}
+.solar_panel {
+  background-image: url("../../assets/images/solar-panel.jpg");
+}
+.solar_roofs {
+  background-image: url("../../assets/images/solar-roof.jpg");
+}
+.accessories {
+  background-image: url("../../assets/images/accessories.jpg");
+}

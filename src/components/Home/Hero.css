@@ -1,0 +1,70 @@
+.itemText {
+  padding-top: 10vh;
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 90%;
+}
+
+.itemText__info > h1 {
+  color: #393c41;
+  font-size: 4rem;
+  font-weight: 500;
+}
+.itemText__info > h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #5c5d61;
+}
+.itemText__info > h4 > span {
+  border-bottom: 1px solid #5c5d61;
+  cursor: pointer;
+  padding: 0.2rem;
+  transition: all 0.3s ease-out;
+}
+.itemText__info > h4 > span:hover {
+  border-bottom-width: 2px;
+  border-bottom-color: rgb(49, 49, 49);
+  color: #3b3b3b;
+}
+.cta_actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cta_actions .cta__buttons {
+  justify-content: center;
+  display: flex;
+  gap: 2rem;
+}
+@media (max-width: 600px) {
+  .cta_actions .cta__buttons {
+    flex-direction: column;
+  }
+}
+.cta_actions .cta__buttons > button {
+  cursor: pointer;
+  border: none;
+  display: block;
+  width: 26rem;
+  padding: 1.2rem 0 1.2rem 0;
+  border-radius: 5rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  border: transparent;
+  outline: transparent;
+}
+.button--primary {
+  background-color: #393c41;
+  color: white;
+  opacity: 0.9;
+}
+.button--secondary {
+  background-color: white;
+  color: black;
+  opacity: 0.8;
+}
