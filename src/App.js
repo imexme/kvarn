@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { login, logout } from './features/userSlice';
-import HomePage from './components/Home/index';
-import LoginPage from './components/LoginPage/index';
-import SignupPage from './components/SignupPage/index';
-import AccountPage from './components/AccountPage/index';
 import './App.css';
 import { auth } from './firebase/firebase';
+import Spinner from './components/UI/Spinner';
+const HomePage = React.lazy(() => import('./components/Home/index'));
+const LoginPage = React.lazy(() => import('./components/LoginPage/index'));
+const SignupPage = React.lazy(() => import('./components/SignupPage/index'));
+const AccountPage = React.lazy(() => import('./components/AccountPage/index'));
+
 
 function App() {
   const { user } = useSelector(state => state.user);
@@ -38,27 +40,30 @@ function App() {
 
   return (
     <div className="App">
-      <Switch>
-        <Route path="/" exact>
-          <HomePage isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        </Route>
+      <Suspense fallback={<div className='centered'><Spinner /></div>}>
 
-        <Route exact path="/login">
-          {user && <Redirect to="/teslaaccount" />}
-          {!user && <LoginPage />}
-        </Route>
+        <Switch>
+          <Route path="/" exact>
+            <HomePage isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+          </Route>
 
-        <Route exact path="/signup">
-          {user && <Redirect to="/teslaaccount" />}
-          {!user && <SignupPage />}
-        </Route>
+          <Route exact path="/login">
+            {user && <Redirect to="/teslaaccount" />}
+            {!user && <LoginPage />}
+          </Route>
 
-        <Route exact path="/teslaaccount">
-          {!user && <Redirect to="/login" />}
-          {user && <AccountPage isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
-        </Route>
+          <Route exact path="/signup">
+            {user && <Redirect to="/teslaaccount" />}
+            {!user && <SignupPage />}
+          </Route>
 
-      </Switch>
+          <Route exact path="/teslaaccount">
+            {!user && <Redirect to="/login" />}
+            {user && <AccountPage isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
+          </Route>
+
+        </Switch>
+      </Suspense>
     </div>
   );
 }
