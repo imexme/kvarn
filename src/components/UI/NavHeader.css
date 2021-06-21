@@ -73,4 +73,7 @@
   .header__links {
     display: none;
   }
+  .shop {
+    display: none;
+  }
 }

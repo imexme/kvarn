@@ -1,7 +1,7 @@
 .menuItem {
-  border-bottom: 1px solid #d0d1d2;
   text-align: left;
   cursor: pointer;
+  padding-left: 2rem;
 }
 .menuItem > h4 {
   font-weight: 400;
@@ -12,4 +12,7 @@
 }
 .menuItem > h4::first-letter {
   text-transform: capitalize;
+}
+.menuItem > h4 :hover {
+  color: #333;
 }

@@ -5,7 +5,7 @@ import { login, logout } from './features/userSlice';
 import './App.css';
 import { auth } from './firebase/firebase';
 import Spinner from './components/UI/Spinner';
-const HomePage = React.lazy(() => import('./components/Home/index'));
+import HomePage from './components/Home/index';
 const LoginPage = React.lazy(() => import('./components/LoginPage/index'));
 const SignupPage = React.lazy(() => import('./components/SignupPage/index'));
 const AccountPage = React.lazy(() => import('./components/AccountPage/index'));

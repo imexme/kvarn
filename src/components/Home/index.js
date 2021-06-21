@@ -1,11 +1,13 @@
+
 import NavHeader from '../UI/NavHeader';
 import Menu from '../Menu/Menu';
 import Section from './Section';
 import './index.css';
 const Home = ({ isMenuOpen, setIsMenuOpen }) => {
+
     const HeroSections = [
         {
-            model: "model_s",
+            backgroundImage: "model-s.jpg",
             title: "Model S",
             description: "Order Online for",
             descriptionSpan: "Touchless Delivery",
@@ -14,7 +16,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
 
         },
         {
-            model: "model_y",
+            backgroundImage: "model-y.jpg",
             title: "Model Y",
             description: "Order Online for",
             descriptionSpan: "Touchless Delivery",
@@ -23,7 +25,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
 
         },
         {
-            model: "model_3",
+            backgroundImage: "model-3.jpg",
             title: "Model 3",
             description: "Order Online for",
             descriptionSpan: "Touchless Delivery",
@@ -32,7 +34,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
 
         },
         {
-            model: "model_x",
+            backgroundImage: "model-x.jpg",
             title: "Model X",
             description: "Order Online for",
             descriptionSpan: "Touchless Delivery",
@@ -41,7 +43,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
 
         },
         {
-            model: "solar_panel",
+            backgroundImage: "solar-panel.jpg",
             title: "Lowest Cost Solar Panel in America",
             description: "Money-back guarantee",
             descriptionSpan: "",
@@ -50,16 +52,16 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
 
         },
         {
-            model: "solar_roofs",
+            backgroundImage: "solar-roof.jpg",
             title: "Solar for New Roofs",
-            description: "Solar ROof Costs Less Than a New Roof Plus Solar Panels",
+            description: "Solar Roof Costs Less Than a New Roof Plus Solar Panels",
             descriptionSpan: "",
             leftButton: "Order Now",
             rightButton: "Learn More"
 
         },
         {
-            model: "accessories",
+            backgroundImage: "accessories.jpg",
             title: "Accessories",
             description: "",
             descriptionSpan: "",
@@ -73,7 +75,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
         <div className="HomePage">
             <NavHeader isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <Menu isMenuOpen={isMenuOpen} />
-            {HeroSections.map((section, index) => <Section keyy={index} model={section.model} title={section.title} description={section.description} descriptionSpan={section.descriptionSpan} leftButton={section.leftButton} rightButton={section.rightButton} />)}
+            {HeroSections.map((section, index) => <Section key={index} model={section.model} title={section.title} description={section.description} descriptionSpan={section.descriptionSpan} leftButton={section.leftButton} rightButton={section.rightButton} backgroundImage={section.backgroundImage} />)}
         </div>
     )
 }
