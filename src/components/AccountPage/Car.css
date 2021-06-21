@@ -38,3 +38,30 @@
   color: #3e6be2;
   cursor: pointer;
 }
+@media (max-width: 900px) {
+  .car__image > img {
+    width: 80rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .car__image > img {
+    width: 50rem;
+  }
+  .car__model {
+    margin-top: -10rem;
+  }
+  .car__actions {
+    margin-top: 0;
+  }
+  .car__actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .car__image > img {
+    width: 50rem;
+  }
+}
