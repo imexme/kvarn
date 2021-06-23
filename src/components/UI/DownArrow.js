@@ -3,6 +3,8 @@ import React from 'react'
 import './DownArrow.css'
 
 const DownArrow = () => {
+
+
     return (
         <div className="downarrow">
             <img src={downArrow} alt="" />

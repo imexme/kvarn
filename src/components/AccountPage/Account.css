@@ -1,6 +1,7 @@
 .account {
   opacity: 0;
   animation: fadein 1s ease forwards;
+  animation-delay: 0.5s;
 }
 .account__info {
   display: flex;

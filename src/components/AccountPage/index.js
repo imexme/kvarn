@@ -10,4 +10,4 @@ const AccountPage = ({ isMenuOpen, setIsMenuOpen }) => {
     )
 }
 
-export default AccountPage
+export default React.memo(AccountPage)

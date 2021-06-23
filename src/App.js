@@ -58,8 +58,9 @@ function App() {
           </Route>
 
           <Route exact path="/teslaaccount">
-            {!user && <Redirect to="/login" />}
             {user && <AccountPage isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />}
+            {!user && <Redirect to="/login" />}
+
           </Route>
 
         </Switch>

@@ -12,7 +12,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
             description: "Order Online for",
             descriptionSpan: "Touchless Delivery",
             leftButton: "Custom Order",
-            rightButton: "Exisiting Inventoroy"
+            rightButton: "Exisiting Inventoroy",
 
         },
         {
@@ -75,7 +75,8 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
         <div className="HomePage">
             <NavHeader isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <Menu isMenuOpen={isMenuOpen} />
-            {HeroSections.map((section, index) => <Section key={index} model={section.model} title={section.title} description={section.description} descriptionSpan={section.descriptionSpan} leftButton={section.leftButton} rightButton={section.rightButton} backgroundImage={section.backgroundImage} />)}
+            {HeroSections.map((section, index) => <Section key={index} model={section.model} title={section.title} description={section.description} descriptionSpan={section.descriptionSpan} leftButton={section.leftButton} rightButton={section.rightButton} backgroundImage={section.backgroundImage}
+            />)}
         </div>
     )
 }

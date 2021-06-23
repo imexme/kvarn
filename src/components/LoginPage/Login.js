@@ -10,13 +10,13 @@ import "./Login.css";
 
 const Login = () => {
     const [isLoading, setIsLoading] = useState(false);
+
     const firebaseLogin = useLogin(setIsLoading);
     const signInHandler = (userData) => {
         setIsLoading(true);
         firebaseLogin(userData.email, userData.password);
 
     }
-
     return (
         <div className="login">
             {isLoading && <Spinner animation="border" />}
