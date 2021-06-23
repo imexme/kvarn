@@ -5,6 +5,8 @@
   display: flex;
   flex-direction: column;
   gap: 7rem;
+  opacity: 0;
+  animation: fadein 1s ease forwards;
 }
 .signup__info {
   display: flex;
@@ -37,4 +39,12 @@
   height: 1px;
   margin: 4px 8px;
   background-color: rgb(226, 227, 227);
+}
+
+@keyframes fadein {
+  0% {
+  }
+  100% {
+    opacity: 1;
+  }
 }
