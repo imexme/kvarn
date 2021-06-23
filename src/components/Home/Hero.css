@@ -82,7 +82,20 @@
     height: 65%;
     padding-top: 20vh;
   }
+  .itemText__info > h1 {
+    margin-bottom: 1rem;
+  }
   .cta_actions .cta__buttons > button {
     width: 36rem;
+  }
+}
+@media (max-width: 350px) {
+  .itemText {
+    max-width: 80%;
+    height: 75%;
+    padding-top: 20vh;
+  }
+  .cta_actions .cta__buttons > button {
+    width: 30rem;
   }
 }
