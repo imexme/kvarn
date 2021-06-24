@@ -76,6 +76,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
             <NavHeader isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
             <Menu isMenuOpen={isMenuOpen} />
             {HeroSections.map((section, index) => <Section key={index} model={section.model} title={section.title} description={section.description} descriptionSpan={section.descriptionSpan} leftButton={section.leftButton} rightButton={section.rightButton} backgroundImage={section.backgroundImage}
+                isMenuOpen={isMenuOpen}
             />)}
         </div>
     )

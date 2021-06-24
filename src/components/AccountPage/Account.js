@@ -3,10 +3,10 @@ import { auth } from '../../firebase/firebase';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../features/userSlice';
 import { Link, useHistory } from 'react-router-dom';
-import NavHeader from '../UI/NavHeader';
+
 import Car from './Car';
 import './Account.css';
-const Account = ({ isMenuOpen, setIsMenuOpen }) => {
+const Account = ({ isMenuOpen }) => {
     const displayName = useSelector(state => state.user.user.displayName);
     const dispatch = useDispatch();
     const history = useHistory();
@@ -18,9 +18,11 @@ const Account = ({ isMenuOpen, setIsMenuOpen }) => {
         })
         history.push("/");
     }
+    const style = isMenuOpen ? { filter: 'blur(5px)' } : {};
+    console.log(style);
     return (
-        <div className="account">
-            <NavHeader notSticky={true} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <div className="account" style={style} >
+
             <div className="account__info">
                 <div className="account__person">
                     <h4>{`${displayName}'s Tesla`}</h4>

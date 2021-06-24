@@ -5,13 +5,16 @@ import './Section.css'
 const Section = (props) => {
     const dimensions = useWindowDimensions();
     const bgImgPath = `/images/${dimensions.width < 600 ? 'mobile' : 'desktop'}-${props.backgroundImage}`
-    const bgImg = {
-        backgroundImage: 'url(' + bgImgPath + ')'
+    const blur = props.isMenuOpen ? '5px' : '0';
+    const style = {
+        backgroundImage: 'url(' + bgImgPath + ')',
+        filter: 'blur(' + blur + ')',
     }
 
 
+    console.log(style)
     return (
-        <div className='wrap' style={bgImg} >
+        <div className='wrap' style={style} >
             <Hero
                 title={props.title}
                 description={props.description}
