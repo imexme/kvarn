@@ -1,4 +1,4 @@
-
+// import React from 'react';
 import NavHeader from '../UI/NavHeader';
 import Menu from '../Menu/Menu';
 import Section from './Section';
@@ -11,8 +11,8 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
             title: "Model S",
             description: "Order Online for",
             descriptionSpan: "Touchless Delivery",
-            leftButton: "Custom Order",
-            rightButton: "Exisiting Inventoroy",
+            leftButton: "Индивидуальный заказ",
+            rightButton: "Подробнее",
 
         },
         {

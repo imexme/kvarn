@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import useWindowDimensions from '../../hooks/use-windowDimensions';
 import Hero from './Hero';
 import './Section.css'

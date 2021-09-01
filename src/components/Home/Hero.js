@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import DownArrow from '../UI/DownArrow'
 import './Hero.css'
 const Hero = (props) => {

@@ -7,7 +7,7 @@
 }
 .login__logo > a > img {
   object-fit: contain;
-  width: 12rem;
+  width: 10rem;
 }
 .login__language {
   color: #393c41;
@@ -21,7 +21,7 @@
   transition: all 0.2s ease-in;
 }
 .login__language:hover {
-  background-color: rgba(211, 211, 211, 0.294);
+  background-color: rgba(248, 248, 248, 0.294);
 }
 
 .login__language > .MuiSvgIcon-root {

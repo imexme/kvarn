@@ -11,7 +11,7 @@
 }
 
 .itemText__info > h1 {
-  color: #393c41;
+  color: #ffffff;
   font-size: 4rem;
   font-weight: 500;
   transform: translateY(20px);
@@ -22,7 +22,7 @@
 .itemText__info > h4 {
   font-size: 1.4rem;
   font-weight: 400;
-  color: #5c5d61;
+  color: #000000;
   opacity: 0;
   animation: fadeIn 1s ease forwards;
   animation-delay: 1s;

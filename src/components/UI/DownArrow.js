@@ -1,5 +1,5 @@
 import downArrow from '../../assets/images/down-arrow.svg';
-import React from 'react'
+// import React from 'react'
 import './DownArrow.css'
 
 const DownArrow = () => {

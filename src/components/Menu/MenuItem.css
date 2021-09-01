@@ -1,18 +1,32 @@
 .menuItem {
   text-align: left;
   cursor: pointer;
-  padding-left: 2rem;
+  padding-left: 1rem;
+  text-transform: capitalize;
+
 }
 .menuItem > h4 {
   font-weight: 400;
   letter-spacing: 0.5px;
-  /* text-transform: uppercase; */
-  padding-bottom: 1.4rem;
-  font-size: 1.4rem;
+  text-transform: capitalize;
+  padding-bottom: 1.2rem;
+  font-size: 1.2rem;
 }
+/* 
 .menuItem > h4::first-letter {
   text-transform: capitalize;
 }
-.menuItem > h4 :hover {
-  color: #333;
+ */
+
+
+.menuItem > h4:hover{
+transition: all 0.5s ease-in;
+color: crimson;
 }
+
+.menuItem:hover {
+  /* color: crimson; */
+  
+
+}
+  
