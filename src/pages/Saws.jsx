@@ -2,8 +2,8 @@ import React from 'react';
 import NavHeader from '../components/UI/NavHeader';
 import Menu from '../components/Menu/Menu';
 import Section from '../components/Home/Section';
-import './Fresa.css';
-const Fresa = ({ isMenuOpen, setIsMenuOpen }) => {
+import './Hydrohead.css';
+const Saws = ({ isMenuOpen, setIsMenuOpen }) => {
 
     // const HeroSections = [
     //     {
@@ -84,4 +84,4 @@ const Fresa = ({ isMenuOpen, setIsMenuOpen }) => {
     )
 }
 
-export default Fresa;
+export default Saws;

@@ -1,30 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, } from 'react';
 import useWindowDimensions from '../../hooks/use-windowDimensions';
-import MenuItem from './MenuItem';
+// import MenuItem from './MenuItem';
 import './Menu.css';
-import { Link, NavLink } from 'react-router-dom';
-import { Nav } from 'react-bootstrap';
-// import {
-//     BrowserRouter as Router,
-//     Switch,
-//     Route,
-//     Link
-// } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-{/* <Link to="/">"Профильные Фрезы"</Link> */ }
 
 
 export const Menu = ({ isMenuOpen }) => {
-   const dimensions = useWindowDimensions();
-  const [menuItems, setMenuItems] = useState([
-        "Профильные Фрезы", "Гидроголовы", "Castor", "Дисковые пилы", "Заточные станки", "Аксессуары", "Сменные ножи", "Прочее"]);
+    const dimensions = useWindowDimensions();
+
+    const [menuItems, setMenuItems] = useState([]);
+
+    const Items = [
+        { name1: "Дисковые пилы" },
+        { name2: "Профильные Фрезы" },
+        { name3: "Castor (Кастор)" },
+        { name4: "Гидроголовы" },
+        { name5: "Заточные станки" },
+        { name6: "Сменные ножи" },
+        { name7: "Аксессуары" },
+        { name8: "Прочее" },
+
+
+    ];
+
     useEffect(() => {
-        if (dimensions.width <= 900) {
-            setMenuItems(["Профильные фрезы", "Гидроголовы", "Castor (Kaстор)", "Дисковые пилы", "Заточные станки", "Аксессуары", "Сменные ножи", "Прочее"]);
-        } else {
-            setMenuItems(["Дисковые пилы", "Заточные станки", "Аксессуары", "Сменные ножи", "Прочее"])
-        }
-    }, [dimensions.width])
+        setMenuItems(Items);
+    }, []);
+
 
 
     return (
@@ -32,10 +35,38 @@ export const Menu = ({ isMenuOpen }) => {
 
             <div className={`menu ${isMenuOpen && 'showMenu'}`}>
 
-                {menuItems.map((item, index) => <MenuItem title={item} key={index[0]} />)}
+
+
+                {menuItems.map((Items, index) => (
+                    <p className="menuItem" key={index}>
+                        <Link to='/saws'>{Items.name1} </Link>
+                        <Link to='/fresa'>{Items.name2} </Link>
+                        <Link to='/castor'>{Items.name3} </Link>
+                        <Link to='/hydrohead'>{Items.name4} </Link>
+                        <Link to='/sharpen'>{Items.name5} </Link>
+                        <Link to='/knife'>{Items.name6} </Link>
+                        <Link to='/accessories'>{Items.name7} </Link>
+                        <Link to='/other'>{Items.name8} </Link>
+
+
+
+
+
+                    </p>
+
+
+
+                ))}
+
             </div>
+
         </>
     )
 }
 
 export default Menu
+
+{/* <Link to='/fresa'>
+                    {menuItems.map((item, index) => <MenuItem title=
+                        {item} key={index[1]} />)}
+                </Link> */}

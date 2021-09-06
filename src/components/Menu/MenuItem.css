@@ -3,20 +3,22 @@
   cursor: pointer;
   padding-left: 1rem;
   text-transform: capitalize;
+  font-size: 1.2rem;
+
 
 }
-.menuItem > h4 {
-  font-weight: 400;
+.menuItem > a {
+  font-weight: 200;
   letter-spacing: 0.5px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   padding-bottom: 1.2rem;
   font-size: 1.2rem;
 }
-/* 
-.menuItem > h4::first-letter {
-  text-transform: capitalize;
-}
- */
+
+/* .menuItem > h4::first-letter {
+  text-transform: uppercase;
+} */
+
 
 
 .menuItem > h4:hover{
@@ -25,7 +27,7 @@ color: crimson;
 }
 
 .menuItem:hover {
-  /* color: crimson; */
+  color: crimson;
   
 
 }

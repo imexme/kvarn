@@ -8,17 +8,17 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
     const HeroSections = [
         {
             backgroundImage: "model-s.jpg",
-            title: "Model S",
-            description: "Order Online for",
-            descriptionSpan: "Touchless Delivery",
+            title: "Kvarnstrands",
+            description: "Гарантия качества  ",
+            descriptionSpan: "  Laser cutting tehnology",
             leftButton: "Индивидуальный заказ",
             rightButton: "Подробнее",
 
         },
         {
             backgroundImage: "model-y.jpg",
-            title: "Model Y",
-            description: "Order Online for",
+            title: "Наши партнеры",
+            description: "почему нам доверяют",
             descriptionSpan: "Touchless Delivery",
             leftButton: "Custom Order",
             rightButton: "Exisiting Inventoroy"
@@ -26,7 +26,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
         },
         {
             backgroundImage: "model-3.jpg",
-            title: "Model 3",
+            title: "Наша история",
             description: "Order Online for",
             descriptionSpan: "Touchless Delivery",
             leftButton: "Custom Order",
@@ -35,7 +35,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
         },
         {
             backgroundImage: "model-x.jpg",
-            title: "Model X",
+            title: "Современные технологии",
             description: "Order Online for",
             descriptionSpan: "Touchless Delivery",
             leftButton: "Custom Order",
@@ -44,22 +44,15 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
         },
         {
             backgroundImage: "solar-panel.jpg",
-            title: "Lowest Cost Solar Panel in America",
+            title: "Самый острый инструмент",
             description: "Money-back guarantee",
             descriptionSpan: "",
             leftButton: "Order Now",
             rightButton: "Learn More"
 
         },
-        {
-            backgroundImage: "solar-roof.jpg",
-            title: "Solar for New Roofs",
-            description: "Solar Roof Costs Less Than a New Roof Plus Solar Panels",
-            descriptionSpan: "",
-            leftButton: "Order Now",
-            rightButton: "Learn More"
 
-        },
+
         {
             backgroundImage: "accessories.jpg",
             title: "Accessories",
