@@ -11,7 +11,7 @@ import Knife from './pages/Knife';
 import Other from './pages/Other';
 import Accessories from './pages/Accessories';
 
-
+// import Footer from './Home/Footer'
 import Spinner from './components/UI/Spinner';
 import HomePage from './components/Home/index';
 
@@ -73,7 +73,6 @@ function App() {
 
 
 
-
           {/* {user && <Redirect to="/account" />}
             {!user && <LoginPage />} */}
           {/* 
@@ -93,6 +92,7 @@ function App() {
       </Suspense>
     </div>
   );
+
 }
 
 export default App;

@@ -3,6 +3,8 @@ import NavHeader from '../UI/NavHeader';
 import Menu from '../Menu/Menu';
 import Section from './Section';
 import './index.css';
+import { Footer } from './Footer';
+
 const Home = ({ isMenuOpen, setIsMenuOpen }) => {
 
     const HeroSections = [
@@ -72,6 +74,7 @@ const Home = ({ isMenuOpen, setIsMenuOpen }) => {
                 isMenuOpen={isMenuOpen}
             />)}
         </div>
+
     )
 }
 
